@@ -2,7 +2,7 @@
     "plugins": ["disqus"],
     "pluginsConfig": {
         "disqus": {
-            "shortName": "introducetogitbook"
+            "shortName": "http://book.h88829.top"
         }
     }  
 }
