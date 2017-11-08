@@ -1,4 +1,4 @@
-一、 打包去掉 console.log\(\)
+一、 **打包去掉 console.log\(\)**
 
 > > webpack.config.js 的 plugins 里面加上
 > >
@@ -16,5 +16,5 @@ new webpack.optimize.UglifyJsPlugin({
 })
 ```
 
-
+二、
 
