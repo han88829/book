@@ -16,7 +16,7 @@ new webpack.optimize.UglifyJsPlugin({
 })
 ```
 
-二、react router 4 结合webpack按需加载
+**二、react router 4 结合webpack按需加载**
 
 ```
    route4相对于route更新较大，route 3的方法已不适用于4
