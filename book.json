@@ -2,7 +2,7 @@
     "plugins": ["disqus"],
     "pluginsConfig": {
         "disqus": {
-            "shortName": "http://book.h88829.top"
+            "shortName": "h88829-top-1"
         }
     }  
 }
