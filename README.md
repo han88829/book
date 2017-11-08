@@ -1,14 +1,48 @@
-# 此书将主要用来存储技术上的问题，方便查询
+# 此书由众好友一起维护，不同的行业，不同的分享。
 
 2017年11月6日
 
-关于我：
+web维护：
 
-* 一个在前端路上默默前行的boy；
+* Mr. Han
 
-* [http://h88829.top](http://h88829.top "博客")  个人博客；
+* 一个在前端路上默默前行的boy
 
-* [https://github.com/han88829](https://github.com/han88829 "github")  github；
+* [http://h88829.top](http://h88829.top "博客")  个人博客
+
+* [https://github.com/han88829](https://github.com/han88829 "github")  github
+
+
+
+Ios维护：
+
+> no1
+>
+> * Mr. Yang
+>
+> * 。。。
+>
+> * 。。。
+>
+> * 。。。
+
+> no2
+>
+> * Mr.Zhao
+> * ...
+> * ...
+> * [https://github.com/le1149733675](https://github.com/le1149733675 "github")  github
+
+
+
+Design维护：
+
+* Mr.Wang
+* ...
+* ...
+* ...
+
+
 
 
 
