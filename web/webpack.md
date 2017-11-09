@@ -1,10 +1,11 @@
-一、 **打包去掉 console.log\(\)**
+一、 **打包去掉 console.log**
 
-> > webpack.config.js 的 plugins 里面加上
-> >
-> > drop\_debugger: true,
-> >
-> > drop\_console: true
+        webpack.config.js 的 plugins 里面加上一下代码：
+
+```
+drop_debugger: true,
+drop_console: true
+```
 
 ```
 new webpack.optimize.UglifyJsPlugin({
@@ -18,53 +19,52 @@ new webpack.optimize.UglifyJsPlugin({
 
 **二、react router 4 结合webpack按需加载**
 
+       route4相对于route更新较大，route 3的方法已不适用于4
+
+       import loadSomething from 'bundle-loader?lazy!./Something'（官方给的引入文件例子，会报错）
+
+       我们首先需要一个异步加载的包装组件Bundle。Bundle的主要功能就是接收一个组件异步加载的方法，并返回相应的react组件：
+
 ```
-   route4相对于route更新较大，route 3的方法已不适用于4
 
-   import loadSomething from 'bundle-loader?lazy!./Something'（官方给的引入文件例子，会报错）
+export default Bundleimport React, { Component } from 'react'
 
-   我们首先需要一个异步加载的包装组件Bundle。Bundle的主要功能就是接收一个组件异步加载的方法，并返回相应的react组件：
+class Bundle extends Component {
+    state = {
+        // short for "module" but that's a keyword in js, so "mod"
+        mod: null
+    }
+
+    componentWillMount() {
+        this.load(this.props)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.load !== this.props.load) {
+            this.load(nextProps)
+        }
+    }
+
+    load(props) {
+        this.setState({
+            mod: null
+        })
+        //注意这里，使用Promise对象; mod.default导出默认
+        props.load().then((mod) => {
+            this.setState({
+                mod: mod.default ? mod.default : mod
+            });
+        });
+
+    }
+
+    render() {
+        return this.state.mod ? this.props.children(this.state.mod) : "";
+    }
+}
+
+export default Bundle
 ```
-
-* ```
-  import React, { Component } from 'react'
-
-  class Bundle extends Component {
-      state = {
-          // short for "module" but that's a keyword in js, so "mod"
-          mod: null
-      }
-
-      componentWillMount() {
-          this.load(this.props)
-      }
-
-      componentWillReceiveProps(nextProps) {
-          if (nextProps.load !== this.props.load) {
-              this.load(nextProps)
-          }
-      }
-
-      load(props) {
-          this.setState({
-              mod: null
-          })
-          //注意这里，使用Promise对象; mod.default导出默认
-          props.load().then((mod) => {
-              this.setState({
-                  mod: mod.default ? mod.default : mod
-              });
-          });
-
-      }
-
-      render() {
-          return this.state.mod ? this.props.children(this.state.mod) : "";
-      }
-  }
-
-  export default Bundle
-  ```
 
 然后在定义路由的页面用bundle包装文件
 
