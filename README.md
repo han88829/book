@@ -10,7 +10,7 @@ web维护：
 
 * [https://github.com/han88829](https://github.com/han88829 "github")  github
 
-Ios维护：
+iOS维护：
 
 * Mr. Han
 
@@ -20,11 +20,11 @@ Ios维护：
 
 * ...
 
-Ios维护：
+iOS维护：
 
 * Mr. Zhao
 
-* ...
+* 进阶中的iOS开发者...
 
 * ...
 
