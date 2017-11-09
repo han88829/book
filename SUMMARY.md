@@ -8,5 +8,6 @@
   * [css](web/css.md)
     * [滚动条](web/css/gun-dong-tiao.md)
 * [ios](ios.md)
+  * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [Design](design.md)
 
