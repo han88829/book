@@ -10,6 +10,7 @@
   * [cookie](web/cookie.md)
   * [react](web/react.md)
     * [mobx](web/react/mobx.md)
+  * [javascript](web/javascript.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [Design](design.md)
