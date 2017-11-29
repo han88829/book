@@ -22,5 +22,9 @@ document.cookie = cookieName + "=; expires="+ex.toGMTString() + ";path=/";
 }
 ```
 
+# cookie存储path
+
+cookie存储的时候，会自动加上path，只有子路由下面的才能在发送的时候获取到
+
 
 
