@@ -5,6 +5,7 @@
 * [web](web.md)
   * [fetch](web/fetch.md)
   * [webpack](web/webpack.md)
+    * [配置](web/webpack/pei-zhi.md)
   * [css](web/css.md)
     * [滚动条](web/css/gun-dong-tiao.md)
   * [cookie](web/cookie.md)
