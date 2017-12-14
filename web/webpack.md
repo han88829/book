@@ -1,32 +1,14 @@
-一、 **打包去掉 console.log**
-
-        webpack.config.js 的 plugins 里面加上一下代码：
+**react router 4 结合webpack按需加载**
 
 ```
-drop_debugger: true,
-drop_console: true
+   route4相对于route更新较大，route 3的方法已不适用于4
+
+   import loadSomething from 'bundle-loader?lazy!./Something'（官方给的引入文件例子，会报错）
+
+   我们首先需要一个异步加载的包装组件Bundle。Bundle的主要功能就是接收一个组件异步加载的方法，并返回相应的react组件：
 ```
 
 ```
-new webpack.optimize.UglifyJsPlugin({
-  compress:{
-    warnings: false,
-    drop_debugger: true,
-    drop_console: true
-  }
-})
-```
-
-**二、react router 4 结合webpack按需加载**
-
-       route4相对于route更新较大，route 3的方法已不适用于4
-
-       import loadSomething from 'bundle-loader?lazy!./Something'（官方给的引入文件例子，会报错）
-
-       我们首先需要一个异步加载的包装组件Bundle。Bundle的主要功能就是接收一个组件异步加载的方法，并返回相应的react组件：
-
-```
-
 export default Bundleimport React, { Component } from 'react'
 
 class Bundle extends Component {
