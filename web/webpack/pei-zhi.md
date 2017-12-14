@@ -18,13 +18,9 @@ new webpack.optimize.UglifyJsPlugin({
        // 去掉注释内容
        comments: false,
    },
-         
+
 }),
 ```
-
-
-
-
 
 
 
