@@ -6,43 +6,25 @@ drop\_debugger: true,
 drop\_console: true
 
 ```
-new
- webpack.optimize.UglifyJsPlugin({
-  
-compress
-:{
-    
-warnings
-: 
-false
-,
-    
-drop_debugger
-: 
-true
-,
-    
-drop_console
-: 
-true
-
-  }
-})
-```
-
-二、 打包去除所有注释
-
-```
 new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            output: {
-                // 去掉注释内容
-                comments: false,
-            },
-        }),
+   compress: {
+       warnings: false,
+       drop_debugger: true,
+       //去除所有console.log
+       drop_console: true,
+
+   },
+   output: {
+       // 去掉注释内容
+       comments: false,
+   },
+         
+}),
 ```
+
+
+
+
 
 
 
