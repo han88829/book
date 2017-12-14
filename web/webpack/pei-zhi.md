@@ -1,9 +1,6 @@
-一、打包去除所有console.log
+一、打包去除所有console.log 和注释
 
-webpack.config.js 的 plugins 里面加上
-
-drop\_debugger: true,  
-drop\_console: true
+        具体配置如下：
 
 ```
 new webpack.optimize.UglifyJsPlugin({
