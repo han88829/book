@@ -4,7 +4,7 @@
 get post 请求都必须加上  credentials: 'include'
 ```
 
-二、 服务端跨域请求头配置
+**二、 服务端跨域请求头配置**
 
 ```
 try_files $uri $uri/ /index.php?s=$uri&$args;
