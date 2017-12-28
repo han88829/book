@@ -9,6 +9,7 @@
   * [css](web/css.md)
     * [滚动条](web/css/gun-dong-tiao.md)
     * [input自动填充背景色](web/css/inputzi-dong-tian-chong-bei-jing-se.md)
+    * [颜色渐变](web/css/yan-se-jian-bian.md)
   * [cookie](web/cookie.md)
   * [react](web/react.md)
     * [mobx](web/react/mobx.md)
