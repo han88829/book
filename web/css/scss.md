@@ -44,7 +44,11 @@ yarn add npm-run-all
 
 直接运行项目就可以了
 
-
-
 npm run build 之后scss解析的css文件会很多，可以在.gitignore文件中忽视掉这些文件
+
+```
+src/**/*.css               //屏蔽所有的css文件
+```
+
+
 
