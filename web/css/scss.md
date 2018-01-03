@@ -2,8 +2,6 @@
 
 react在版本升级到16.0之后就不在内置支持scss了，要根据官方文档进行配置；
 
-
-
 1、先安装node-sass-chokidar
 
 ```
@@ -44,5 +42,9 @@ yarn add npm-run-all
    }
 ```
 
+直接运行项目就可以了
 
+
+
+npm run build 之后scss解析的css文件会很多，可以在.gitignore文件中忽视掉这些文件
 
