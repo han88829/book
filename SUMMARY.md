@@ -15,6 +15,7 @@
   * [react](web/react.md)
     * [mobx](web/react/mobx.md)
   * [javascript](web/javascript.md)
+    * [canvas](web/javascript/canvas.md)
   * [资料](web/zi-liao.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
