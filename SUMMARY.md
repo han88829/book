@@ -17,6 +17,7 @@
   * [javascript](web/javascript.md)
     * [canvas](web/javascript/canvas.md)
     * [排序](web/javascript/suan-fa.md)
+    * [js比较符号==、===](web/javascript/jsbi-jiao-fu-53f73d3d-30013d3d3d.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
 * [ios](ios.md)
