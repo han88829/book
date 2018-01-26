@@ -21,6 +21,7 @@
     * [js比较符号==、===](web/javascript/jsbi-jiao-fu-53f73d3d-30013d3d3d.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
+  * [小程序](web/xiao-cheng-xu.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [Design](design.md)
