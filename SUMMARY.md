@@ -11,6 +11,7 @@
     * [input自动填充背景色](web/css/inputzi-dong-tian-chong-bei-jing-se.md)
     * [颜色渐变](web/css/yan-se-jian-bian.md)
     * [scss](web/css/scss.md)
+    * [网页定制光标](web/css/wang-ye-ding-zhi-guang-biao.md)
   * [cookie](web/cookie.md)
   * [react](web/react.md)
     * [mobx](web/react/mobx.md)
