@@ -9,7 +9,7 @@
 ```
 
 ```
-export default Bundleimport React, { Component } from 'react'
+import React, { Component } from 'react'
 
 class Bundle extends Component {
     state = {
