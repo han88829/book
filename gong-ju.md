@@ -14,3 +14,16 @@
 
 [https://new.sstizi.vip/login](https://new.sstizi.vip/login)
 
+四、vscode扩展
+
+```
+Beautify css/sass/scss/less
+Reactjs snippets
+Simple React Snippets
+wxml
+vscode-fileheader（自动生成开头注释）
+
+```
+
+
+
