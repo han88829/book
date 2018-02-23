@@ -23,6 +23,7 @@
     * [canvas](web/javascript/canvas.md)
     * [排序](web/javascript/suan-fa.md)
     * [js比较符号==、===](web/javascript/jsbi-jiao-fu-53f73d3d-30013d3d3d.md)
+    * [运动函数封装（简易、通用）](web/javascript/yun-dong-han-shu-feng-zhuang-ff08-jian-yi-3001-tong-yong-ff09.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [小程序](web/xiao-cheng-xu.md)
