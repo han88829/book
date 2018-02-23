@@ -10,15 +10,7 @@ web维护：
 
 * [https://github.com/han88829](https://github.com/han88829 "github")  github
 
-iOS维护：
 
-* Mr. Han
-
-* ...
-
-* ...
-
-* ...
 
 iOS维护：
 
@@ -29,13 +21,6 @@ iOS维护：
 * ...
 
 * [https://github.com/le1149733675](https://github.com/le1149733675 "github")   github
-
-Design维护：
-
-* Mr.Wang
-* ...
-* ...
-* ...
 
 
 
