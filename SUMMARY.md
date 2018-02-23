@@ -28,6 +28,5 @@
   * [小程序](web/xiao-cheng-xu.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
-* [Design](design.md)
 * [工具](gong-ju.md)
 
