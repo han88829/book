@@ -1,8 +1,6 @@
-\[原文地址\]\(http://blog.csdn.net/aa122273328/article/details/50388673\)
+\[原文地址\]\([http://blog.csdn.net/aa122273328/article/details/50388673\](http://blog.csdn.net/aa122273328/article/details/50388673\)\)
 
-
-
-```
+```html
 <!DOCTYPE html>
 <html>
 
