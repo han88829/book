@@ -27,6 +27,7 @@
     * [运动函数封装（简易、通用）](web/javascript/yun-dong-han-shu-feng-zhuang-ff08-jian-yi-3001-tong-yong-ff09.md)
     * [导出表格（excel ）](web/javascript/dao-chu-biao-ge-ff08-excel.md)
       * [react使用demo](web/javascript/dao-chu-biao-ge-ff08-excel/reactshi-yong-demo.md)
+    * [js获取屏幕高度宽度](web/javascript/jshuo-qu-ping-mu-gao-du-kuan-du.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [小程序](web/xiao-cheng-xu.md)
