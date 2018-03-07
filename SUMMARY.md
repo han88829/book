@@ -20,6 +20,7 @@
   * [react](web/react.md)
     * [mobx](web/react/mobx.md)
     * [路由](web/react/lu-you.md)
+    * [antd 表格在safari上卡顿](web/react/antd-biao-ge-zai-safari-shang-qia-dun.md)
   * [javascript](web/javascript.md)
     * [canvas](web/javascript/canvas.md)
     * [排序](web/javascript/suan-fa.md)
