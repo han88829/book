@@ -23,6 +23,10 @@ Simple React Snippets
 wxml
 vscode-fileheader（自动生成开头注释）
 
+
+tab键补全标签
+打开：文件——首选项——设置
+修改”emmet.triggerExpansionOnTab”属性  为true
 ```
 
 
