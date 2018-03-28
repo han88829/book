@@ -1,1 +1,17 @@
-{}
+{
+  "title": "个人问题整理书籍",
+  "description": "个人问题整理书籍",
+  "language": "zh",
+  "plugins": [
+    "disqus",
+    "github"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "mybook-1"
+    },
+    "github": {
+      "url": "https://github.com/han88829"
+    }
+  }
+}
