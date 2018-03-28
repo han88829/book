@@ -32,6 +32,7 @@
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [小程序](web/xiao-cheng-xu.md)
+  * [pdf预览](web/pdfyu-lan.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [工具](gong-ju.md)
