@@ -1,7 +1,7 @@
 {
   "title": "个人问题整理书籍",
   "description": "个人问题整理书籍",
-  "language": "zh-CN",
+  "language": "zh-cn",
   "plugins": [
     "disqus",
     "github"
