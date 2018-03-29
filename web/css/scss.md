@@ -50,15 +50,11 @@ npm run build 之后scss解析的css文件会很多，可以在.gitignore文件�
 src/**/*.css               //屏蔽所有的css文件
 ```
 
-
-
-
-
 问题1：生产环境中scss文件样式无效
 
 须在webpack生产环境中配置loader
 
-```
+```js
     {
             test: /\.scss$/,
             use: [{
@@ -69,6 +65,19 @@ src/**/*.css               //屏蔽所有的css文件
               loader: "sass-loader" // compiles Sass to CSS
             }]
           },
+```
+
+打包需要设置
+
+```
+      {
+          loader: require.resolve('sass-loader'),
+          options: {
+              importLoaders: 1,
+              minimize: true,
+              sourceMap: shouldUseSourceMap,
+          },
+     },
 ```
 
 
