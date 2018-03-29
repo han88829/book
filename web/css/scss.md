@@ -52,3 +52,24 @@ src/**/*.css               //屏蔽所有的css文件
 
 
 
+
+
+问题1：生产环境中scss文件样式无效
+
+须在webpack生产环境中配置loader
+
+```
+    {
+            test: /\.scss$/,
+            use: [{
+              loader: "style-loader" // creates style nodes from JS strings
+            }, {
+              loader: "css-loader" // translates CSS into CommonJS
+            }, {
+              loader: "sass-loader" // compiles Sass to CSS
+            }]
+          },
+```
+
+
+
