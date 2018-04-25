@@ -25,6 +25,7 @@
     * [项目初始化](web/react/xiang-mu-chu-shi-hua.md)
       * [react-antd-mobx-momnet](web/react/xiang-mu-chu-shi-hua/react-antd-mobx-momnet.md)
     * [显示字符串中的标签](web/react/xian-shi-zi-fu-chuan-zhong-de-biao-qian.md)
+    * [antd Select 在搜索精准度](web/react/antd-select-zai-sou-suo-jing-zhun-du.md)
   * [javascript](web/javascript.md)
     * [canvas](web/javascript/canvas.md)
     * [排序](web/javascript/suan-fa.md)
