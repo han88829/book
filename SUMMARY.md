@@ -41,6 +41,7 @@
   * [pdf预览](web/pdfyu-lan.md)
   * [react-native](web/react-native.md)
     * [android-studio  打开调试工具](web/react-native/android-studio-da-kai-diao-shi-gong-ju.md)
+    * [适配全面屏](web/react-native/shi-pei-quan-mian-ping.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [工具](gong-ju.md)
