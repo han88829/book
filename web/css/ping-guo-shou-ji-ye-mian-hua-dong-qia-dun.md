@@ -1,0 +1,8 @@
+```
+*{
+  -webkit-overflow-scrolling: touch;
+}
+```
+
+---
+
