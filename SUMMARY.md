@@ -37,6 +37,7 @@
     * [js获取屏幕高度宽度](web/javascript/jshuo-qu-ping-mu-gao-du-kuan-du.md)
     * [toFixed 函数修改](web/javascript/tofixed-han-shu-xiu-gai.md)
     * [获取cookie](web/javascript/huo-qu-cookie.md)
+    * [奇怪的错误问题](web/javascript/qi-guai-de-cuo-wu-wen-ti.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [小程序](web/xiao-cheng-xu.md)
