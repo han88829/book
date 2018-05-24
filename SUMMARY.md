@@ -38,6 +38,7 @@
     * [toFixed 函数修改](web/javascript/tofixed-han-shu-xiu-gai.md)
     * [获取cookie,url参数](web/javascript/huo-qu-cookie.md)
     * [奇怪的错误问题](web/javascript/qi-guai-de-cuo-wu-wen-ti.md)
+    * [copy\(深拷贝 浅拷贝\)](web/javascript/copyshen-kao-bei-qian-kao-8d1d29.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [小程序](web/xiao-cheng-xu.md)
