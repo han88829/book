@@ -48,7 +48,8 @@
     * [android-studio  打开调试工具](web/react-native/android-studio-da-kai-diao-shi-gong-ju.md)
     * [适配全面屏](web/react-native/shi-pei-quan-mian-ping.md)
   * [node](web/node.md)
-    * 服务端 node + nginx 反向代理
+    * [服务端 node + nginx 反向代理](web/node/fu-wu-duan-node-+-nginx-fan-xiang-dai-li.md)
+    * [生成文件夹目录列表](web/node/sheng-cheng-wen-jian-jia-mu-lu-lie-biao.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [工具](gong-ju.md)
