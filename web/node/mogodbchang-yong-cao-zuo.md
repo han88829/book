@@ -32,7 +32,6 @@ connect 用于连接数据库
     来源：掘金
     著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
-
 ## 创建schema & model
 
 ### schema
@@ -92,7 +91,6 @@ const db= {
   User: mongoose.model('MUser', muserSchema),
 };
 module.exports = db;
-
 ```
 
 **现在我们就完成了mongodb的数据连接，数据对象模型的创建。**
@@ -112,37 +110,37 @@ find用来查询并输出该条件下的所有文档`db.Userl.find({conditions},
 ```
 // 查询Article模型下所有数据
 db.Article.find({}, function(err, docs){
-	if (err) {
-			console.log('出错'+ err);
-			return;
-	}
-	res.json(docs); // 以json格式输出
+    if (err) {
+            console.log('出错'+ err);
+            return;
+    }
+    res.json(docs); // 以json格式输出
 });
 
 // 查询Article模型下state字段为'publish'的内容，并且不输出articleContent和user字段内容。注！（1为只输出该字段，0为不输出该字段）
 db.Article.find({state: "publish"}, {articleContent: 0,user: 0}, function(err, docs){
-	if (err) {
-			console.log('出错'+ err);
-			return;
-	}
-	res.json(docs);
+    if (err) {
+            console.log('出错'+ err);
+            return;
+    }
+    res.json(docs);
 });
 //查询阅读量大于500小于600的文章
 db.Article.find(({views: {$gte: 500, $lte: 600}}), function(err, docs){
-	if (err) {
-			console.log('出错'+ err);
-			return;
-	}
-	res.json({data:docs});
+    if (err) {
+            console.log('出错'+ err);
+            return;
+    }
+    res.json({data:docs});
 }) 
 // 复杂条件查询
 //$ro 查询该模型下的title字段或者tag字段，$regex 为正则匹配实现模糊查询，$options为不区分大小写
 db.Article.find({ $or: [{title: {$regex: searchval, $options:'i'} }, { tag: {$regex: searchval, $options:'i' }}] }}, function(err, docs){
-	if (err) {
-			console.log('出错'+ err);
-			return;
-	}
-	res.json({data:docs});
+    if (err) {
+            console.log('出错'+ err);
+            return;
+    }
+    res.json({data:docs});
 })
 
 作者：飞翔荷兰人
@@ -182,10 +180,10 @@ db.Article.find({ $or: [{title: {$regex: searchval, $options:'i'} }, { tag: {$re
 
 ```
 db.Article.findOne({title: req.body.title}, function(err, docs){
-	if (err) {
-		console.log('出错'+ err);
-	}
-	res.json(docs);
+    if (err) {
+        console.log('出错'+ err);
+    }
+    res.json(docs);
 })
 ```
 
@@ -195,10 +193,10 @@ db.Article.findOne({title: req.body.title}, function(err, docs){
 
 ```
 db.Article.findOne(id, function(err, docs){
-	if (err) {
-		console.log('出错'+ err);
-	}
-	res.json(docs);
+    if (err) {
+        console.log('出错'+ err);
+    }
+    res.json(docs);
 })
 ```
 
@@ -208,12 +206,11 @@ db.Article.findOne(id, function(err, docs){
 
 ```
 db.Article.count(id, function(err, docs){
-	if (err) {
-		console.log('出错'+ err);
-	}
-	res.json(docs);
+    if (err) {
+        console.log('出错'+ err);
+    }
+    res.json(docs);
 })
-
 ```
 
 #### 5.where
@@ -230,10 +227,10 @@ db.Article.where('age').gte(25)
 .slaveOk()
 .hint({ age: 1, name: 1 })
 .run(function(err, docs){
-	if (err) {
-		console.log('出错'+ err);
-	}
-	res.json(docs);
+    if (err) {
+        console.log('出错'+ err);
+    }
+    res.json(docs);
 }));
 
 作者：飞翔荷兰人
@@ -248,7 +245,7 @@ db.Article.where('age').gte(25)
 
 ```
 db.MUser.$where('this.firstname === this.lastname').exec((err, docs) => {
-	res.json({docs});
+    res.json({docs});
 });
 ```
 
@@ -258,27 +255,15 @@ sort为排序方法，为该字段正序或者倒序输出内容\(-1为倒序\) 
 
 ```
 // 实现文章分页，按时间倒序排列输出
-
-db.Article.find({
-tag
-:req.params.labe}, 
-function
-(
-err, docs
-)
-{
-	
-if
- (err)
-return
-;
+db.Article.find({tag:req.params.labe}, function(err, docs){
+	if (err)return;
 	res.json(docs)
-}).sort({
-date
-:
--1
-}).skip(page*pagenum).limit(pagenum)
+}).sort({date:-1}).skip(page*pagenum).limit(pagenum)
 
+作者：飞翔荷兰人
+链接：https://juejin.im/post/5b0b7bbb518825156539d5d3
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 ### mongodb增加
@@ -287,61 +272,27 @@ save是一个实例方法，使用时需要先 new Model\(\) 来实例化
 
 ```
 //保存一个用户信息，userobj为你创建的文档对象模型里的字段，需正确对应传入
-const
- userobj={
-	
-email
-: query,
-	
-passworld
-: req.body.passworld,
-	
-hash
-: hash,
-	
-isregister
-: 
-false
-,
-	
-score
-: 
-5
-,
-	
-sign
-: [],
-	
-signdate
-: 
-''
-
+const userobj={
+	email: query,
+	passworld: req.body.passworld,
+	hash: hash,
+	isregister: false,
+	score: 5,
+	sign: [],
+	signdate: ''
 }
-
-new
- db.MUser(userobj).save(
-function
-(
-error
-)
-{
-	
-if
- (error) {
-		res.status(
-500
-).send()
-		
-return
-
+new db.MUser(userobj).save(function(error){
+	if (error) {
+		res.status(500).send()
+		return
 	}
-	res.json({
-statu
-: 
-200
-})
+	res.json({statu: 200})
 })
 
+作者：飞翔荷兰人
+链接：https://juejin.im/post/5b0b7bbb518825156539d5d3
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 ### mongodb删除
@@ -351,31 +302,18 @@ statu
 删除数据方法
 
 ```
-db.Course.remove({
-_id
-: req.body.id}, 
-function
-(
-err, docs
-)
-{
-	
-if
- (err) {
-			res.status(
-500
-).send();
-			
-return
-
+db.Course.remove({_id: req.body.id}, function(err, docs){
+	if (err) {
+			res.status(500).send();
+			return
 	}
-	res.json({
-statu
-: 
-200
-})
+	res.json({statu: 200})
 })
 
+作者：飞翔荷兰人
+链接：https://juejin.im/post/5b0b7bbb518825156539d5d3
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 ### mongodbg更新
@@ -386,110 +324,37 @@ statu
 
 ```
 // 更新指定email字段数据条目下字段为content的内容，如果不存在就创建该字段
-
-db.Share.update({
-email
-: email},{
-$set
-:{
-content
-: newarr}}, 
-function
-(
-err, docs
-)
-{
-    
-if
- (err) {
-            res.status(
-500
-).send();
-            
-return
-
+db.Share.update({email: email},{$set:{content: newarr}}, function(err, docs){
+    if (err) {
+            res.status(500).send();
+            return
     }
-    res.json({
-statu
-: 
-200
-});
+    res.json({statu: 200});
 })
-
 
 //$set 指定字段的值，这个字段不存在就创建它。可以是任何MondoDB支持的类型。
-
-Article.update({
-_id
- : id}, {
-$set
- : {
-views
- : 
-51
-, 
-title
- : ‘修改后的标题’ …}})
-
+Article.update({_id : id}, {$set : {views : 51, title : ‘修改后的标题’ …}})
 
 //$unset 同上取反，删除一个字段
-
-Article.update({
-views
- : 
-50
-}, {
-$unset
- : {
-views
- : ‘remove’}})
-
+Article.update({views : 50}, {$unset : {views : ‘remove’}})
 //执行后: views字段不存在
+
 //$inc 增减修改器，只对数字有效。
-
-Article.update({
-_id
- : id}, {
-$inc
- : {
-views
- : 
-1
-}})
-
+Article.update({_id : id}, {$inc : {views : 1}})
 
 //$push 为字段为数组的内容push数据
-
-Article.update({
-_id
- : id}, {
-$push
- : {
-message
- : messageobj}})
-
+Article.update({_id : id}, {$push : {message : messageobj}})
 
 //$pop从头部或尾部删除单个元素（1为从后面删除,-1为从前面删除）
-
-db.Article.update(({
-_id
-: id), {
-$pop
-:{
-relationships
-: 
--1
-})
-
+db.Article.update(({_id: id), {$pop:{relationships: -1})
 
 //__$pull__删除满足条件的元素，不止删除一个
+db.Article.update(({_id: id), {$pull:{“relationships”:{“fname”:”dongren”, ”lname”: ”zeng”}}})
 
-db.Article.update(({
-_id
-: id), {
-$pull
-:{“relationships”:{“fname”:”dongren”, ”lname”: ”zeng”}}})
-
+作者：飞翔荷兰人
+链接：https://juejin.im/post/5b0b7bbb518825156539d5d3
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 **$set**指定字段的值，这个字段不存在就创建它。可以是任何MondoDB支持的类型。
