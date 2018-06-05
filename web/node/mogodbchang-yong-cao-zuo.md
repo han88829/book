@@ -256,8 +256,8 @@ sort为排序方法，为该字段正序或者倒序输出内容\(-1为倒序\) 
 ```
 // 实现文章分页，按时间倒序排列输出
 db.Article.find({tag:req.params.labe}, function(err, docs){
-	if (err)return;
-	res.json(docs)
+    if (err)return;
+    res.json(docs)
 }).sort({date:-1}).skip(page*pagenum).limit(pagenum)
 
 作者：飞翔荷兰人
@@ -273,20 +273,20 @@ save是一个实例方法，使用时需要先 new Model\(\) 来实例化
 ```
 //保存一个用户信息，userobj为你创建的文档对象模型里的字段，需正确对应传入
 const userobj={
-	email: query,
-	passworld: req.body.passworld,
-	hash: hash,
-	isregister: false,
-	score: 5,
-	sign: [],
-	signdate: ''
+    email: query,
+    passworld: req.body.passworld,
+    hash: hash,
+    isregister: false,
+    score: 5,
+    sign: [],
+    signdate: ''
 }
 new db.MUser(userobj).save(function(error){
-	if (error) {
-		res.status(500).send()
-		return
-	}
-	res.json({statu: 200})
+    if (error) {
+        res.status(500).send()
+        return
+    }
+    res.json({statu: 200})
 })
 
 作者：飞翔荷兰人
@@ -303,11 +303,11 @@ new db.MUser(userobj).save(function(error){
 
 ```
 db.Course.remove({_id: req.body.id}, function(err, docs){
-	if (err) {
-			res.status(500).send();
-			return
-	}
-	res.json({statu: 200})
+    if (err) {
+            res.status(500).send();
+            return
+    }
+    res.json({statu: 200})
 })
 
 作者：飞翔荷兰人
@@ -351,10 +351,6 @@ db.Article.update(({_id: id), {$pop:{relationships: -1})
 //__$pull__删除满足条件的元素，不止删除一个
 db.Article.update(({_id: id), {$pull:{“relationships”:{“fname”:”dongren”, ”lname”: ”zeng”}}})
 
-作者：飞翔荷兰人
-链接：https://juejin.im/post/5b0b7bbb518825156539d5d3
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 **$set**指定字段的值，这个字段不存在就创建它。可以是任何MondoDB支持的类型。
