@@ -293,10 +293,9 @@ html2canvas(shareContent, opts).then(function (canvas) {
  }
 ```
 
-附上react导出pdf demo，经测试放大1.5较清晰
+附上react导出pdf demo，经测试放大1.8较清晰
 
 ```
-
             var shareContent = document.getElementById("table2_1");//需要截图的包裹的（原生的）DOM 对象
             var width = shareContent.offsetWidth; //获取dom 宽度
             var height = shareContent.offsetHeight; //获取dom 高度
