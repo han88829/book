@@ -40,6 +40,7 @@
     * [奇怪的错误问题](web/javascript/qi-guai-de-cuo-wu-wen-ti.md)
     * [copy\(深拷贝 浅拷贝\)](web/javascript/copyshen-kao-bei-qian-kao-8d1d29.md)
     * [导出pdf](web/javascript/dao-chu-pdf.md)
+      * [解决图片失真](web/javascript/dao-chu-pdf/jie-jue-tu-pian-shi-zhen.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [小程序](web/xiao-cheng-xu.md)
