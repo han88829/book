@@ -52,6 +52,7 @@
     * [服务端 node + nginx 反向代理](web/node/fu-wu-duan-node-+-nginx-fan-xiang-dai-li.md)
     * [生成文件夹目录列表](web/node/sheng-cheng-wen-jian-jia-mu-lu-lie-biao.md)
     * [mogodb常用操作](web/node/mogodbchang-yong-cao-zuo.md)
+    * [发布npm包](web/node/fa-bu-npm-bao.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [工具](gong-ju.md)
