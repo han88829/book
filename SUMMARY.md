@@ -41,6 +41,7 @@
     * [copy\(深拷贝 浅拷贝\)](web/javascript/copyshen-kao-bei-qian-kao-8d1d29.md)
     * [导出pdf](web/javascript/dao-chu-pdf.md)
       * [解决图片失真](web/javascript/dao-chu-pdf/jie-jue-tu-pian-shi-zhen.md)
+    * [判断字符串长度（带中文）](web/javascript/pan-duan-zi-fu-chuan-chang-du-ff08-dai-zhong-wen-ff09.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [小程序](web/xiao-cheng-xu.md)
