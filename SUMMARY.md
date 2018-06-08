@@ -29,6 +29,7 @@
     * [antd Select 在搜索精准度](web/react/antd-select-zai-sou-suo-jing-zhun-du.md)
   * [javascript](web/javascript.md)
     * [canvas](web/javascript/canvas.md)
+      * [多张图片合成一张](web/javascript/canvas/duo-zhang-tu-pian-he-cheng-yi-zhang.md)
     * [排序](web/javascript/suan-fa.md)
     * [js比较符号==、===](web/javascript/jsbi-jiao-fu-53f73d3d-30013d3d3d.md)
     * [运动函数封装（简易、通用）](web/javascript/yun-dong-han-shu-feng-zhuang-ff08-jian-yi-3001-tong-yong-ff09.md)
