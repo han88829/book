@@ -29,9 +29,22 @@ tab键补全标签
 修改”emmet.triggerExpansionOnTab”属性  为true
 ```
 
-
-
 五、 墙工具
 
 [https://vpnchina.zdhweb.com/p/vpn-china.html](https://vpnchina.zdhweb.com/p/vpn-china.html)
+
+
+
+六、 一键开启window软件
+
+```
+@echo off
+start "" "C:\Program Files (x86)\Tencent\QQ\Bin\QQScLauncher.exe"
+start "" "D:\Program Files\Microsoft VS Code\Code.exe"
+start "" "D:\Program Files (x86)\DingDing\main\current\DingTalk.exe"
+start "" "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
+start D:\phpStudy\phpStudy.exe
+```
+
+
 
