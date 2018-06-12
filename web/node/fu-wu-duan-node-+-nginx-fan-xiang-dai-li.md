@@ -14,6 +14,7 @@
 4.进入`/etc/nginx/conf.d`目录，创建我们自己的配置文件，去名规则最好是域名加端口，这样以后方便找，比如我的：`rockjins-com-8081.conf`，配置文件写入以下内容：
 
 ```
+# rockjins 这是变量名不能重复
 upstream rockjins {
     server 127.0.0.1:8081; # 这里的端口号写你node.js运行的端口号，也就是要代理的端口号，我的项目跑在8081端口上
     keepalive 64;
@@ -47,11 +48,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 因为服务跑在`8081`端口上，但是阿里云的安全组默认是拒绝`4000`端口以上的授权策略的，大家一定记得去添加安全组规则，如图:
 
-
-
 ![](https://user-gold-cdn.xitu.io/2017/6/14/4275f52578c8e6f0dbadc27572861b38?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
-
 
 8.打开浏览器，输入你的IP或域名，是不是把`8081`端口代理到`80`端口上了，哈哈。
 
