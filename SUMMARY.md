@@ -55,6 +55,7 @@
     * [生成文件夹目录列表](web/node/sheng-cheng-wen-jian-jia-mu-lu-lie-biao.md)
     * [mogodb常用操作](web/node/mogodbchang-yong-cao-zuo.md)
     * [发布npm包](web/node/fa-bu-npm-bao.md)
+    * [pm2 使用指南](web/node/pm2-shi-yong-zhi-nan.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [工具](gong-ju.md)
