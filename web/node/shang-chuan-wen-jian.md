@@ -24,9 +24,9 @@ npm install formidable
 ```
 //jade
 form(role="form", method="post", enctype='multipart/form-data', action="/upload")
-	input(type="text", name="name")
-	input(type="file", name="file" id="file")
-	button(id="submit", type="submit") upload
+    input(type="text", name="name")
+    input(type="file", name="file" id="file")
+    button(id="submit", type="submit") upload
 ```
 
 后端Node代码
@@ -39,32 +39,32 @@ var uuid = require('node-uuid');
 var fs = require('fs');
 
 router.post('/upload', function(req, res, next) {
-	//创建上传表单
-	var form = new formidable.IncomingForm();
-	//设置编辑
-	form.encoding = 'utf-8';
-	//设置上传目录
-	form.uploadDir = 'public/upload/';
-	form.keepExtensions = true;
-	//文件大小
-	form.maxFieldsSize = 10 * 1024 * 1024;
-	form.parse(req, function (err, fields, files) {
-		if(err) {
-			res.send(err);
-			return;
-		}
-		console.log(fields);
-		var extName = /\.[^\.]+/.exec(files.file.name);
-		var ext = Array.isArray(extName)
-			? extName[0]
-			: '';
-		//重命名，以防文件重复
-		var avatarName = uuid() + ext;
-		//移动的文件目录
-		var newPath = form.uploadDir + avatarName;
-		fs.renameSync(files.file.path, newPath);
-		res.send('success');
-	});
+    //创建上传表单
+    var form = new formidable.IncomingForm();
+    //设置编辑
+    form.encoding = 'utf-8';
+    //设置上传目录
+    form.uploadDir = 'public/upload/';
+    form.keepExtensions = true;
+    //文件大小
+    form.maxFieldsSize = 10 * 1024 * 1024;
+    form.parse(req, function (err, fields, files) {
+        if(err) {
+            res.send(err);
+            return;
+        }
+        console.log(fields);
+        var extName = /\.[^\.]+/.exec(files.file.name);
+        var ext = Array.isArray(extName)
+            ? extName[0]
+            : '';
+        //重命名，以防文件重复
+        var avatarName = uuid() + ext;
+        //移动的文件目录
+        var newPath = form.uploadDir + avatarName;
+        fs.renameSync(files.file.path, newPath);
+        res.send('success');
+    });
 });
 ```
 
@@ -75,37 +75,37 @@ router.post('/upload', function(req, res, next) {
 ```
 //form
 form(role="form", method="post", enctype='multipart/form-data', action="/upload")
-	input(type="text", name="name")
-	input(type="file", name="file" id="file")
-	input(type="file", name="file2" id="file2")
-	button(id="submit", type="submit") upload
+    input(type="text", name="name")
+    input(type="file", name="file" id="file")
+    input(type="file", name="file2" id="file2")
+    button(id="submit", type="submit") upload
 
 
 //ajax
 input(type="file", name="file" id="file1")
 button(id="upload", name="upload") submit
 script(type='text/javascript').
-	$(function(){
-		$('#upload').click(function() {
-			var data = new FormData();
-			var files = $("#file1")[0].files;
-			if(files) {
-				data.append("file", files[0]);
-			}
-			$.ajax({
-				type: 'post',
-				dataType: 'json',
-				url: '/upload',
-				data: data,
-				contentType: false,
-				processData: false,
-				success: function(err,result) {
-					console.log(err);
-					console.log(result);
-				}
-			});
-		});
-	});
+    $(function(){
+        $('#upload').click(function() {
+            var data = new FormData();
+            var files = $("#file1")[0].files;
+            if(files) {
+                data.append("file", files[0]);
+            }
+            $.ajax({
+                type: 'post',
+                dataType: 'json',
+                url: '/upload',
+                data: data,
+                contentType: false,
+                processData: false,
+                success: function(err,result) {
+                    console.log(err);
+                    console.log(result);
+                }
+            });
+        });
+    });
 ```
 
 ```
@@ -115,51 +115,51 @@ var uuid = require('node-uuid');
 var fs = require('fs');
 
 module.exports = function (req, options, next) {
-	if(typeof options === 'function'){
-		next = options;
-		options = {};
-	}
-	//创建上传表单
-	var form = new formidable.IncomingForm();
-	//设置编辑
-	form.encoding = options.encoding || 'utf-8';
-	//设置上传目录
-	form.uploadDir = options.uploadDir || './public/upload/';
-	//文件大小
-	form.maxFieldsSize = options.maxFieldsSize || 10 * 1024 * 1024;
-	//解析
-	form.parse(req, function (err, fields, files) {
-		if(err) return next(err);
-		for (x in files) {
-			//后缀名
-			var extName = /\.[^\.]+/.exec(files[x].name);
-			var ext = Array.isArray(extName)
-				? extName[0]
-				: '';
-			//重命名，以防文件重复
-			var avatarName = uuid() + ext;
-			//移动的文件目录
-			var newPath = form.uploadDir + avatarName;
-			fs.renameSync(files[x].path, newPath);
-			fields[x] = {
-				size: files[x].size,
-				path: newPath,
-				name: files[x].name,
-				type: files[x].type,
-				extName: ext
-			};
-		}
-		next(null, fields);
-	});
+    if(typeof options === 'function'){
+        next = options;
+        options = {};
+    }
+    //创建上传表单
+    var form = new formidable.IncomingForm();
+    //设置编辑
+    form.encoding = options.encoding || 'utf-8';
+    //设置上传目录
+    form.uploadDir = options.uploadDir || './public/upload/';
+    //文件大小
+    form.maxFieldsSize = options.maxFieldsSize || 10 * 1024 * 1024;
+    //解析
+    form.parse(req, function (err, fields, files) {
+        if(err) return next(err);
+        for (x in files) {
+            //后缀名
+            var extName = /\.[^\.]+/.exec(files[x].name);
+            var ext = Array.isArray(extName)
+                ? extName[0]
+                : '';
+            //重命名，以防文件重复
+            var avatarName = uuid() + ext;
+            //移动的文件目录
+            var newPath = form.uploadDir + avatarName;
+            fs.renameSync(files[x].path, newPath);
+            fields[x] = {
+                size: files[x].size,
+                path: newPath,
+                name: files[x].name,
+                type: files[x].type,
+                extName: ext
+            };
+        }
+        next(null, fields);
+    });
 }
 
 
 //route
 router.post('/upload', function(req, res, next) {
-	node_upload(req,function (err, fields) {
-		console.log(err);
-		res.json(fields);
-	});
+    node_upload(req,function (err, fields) {
+        console.log(err);
+        res.json(fields);
+    });
 });
 ```
 
@@ -170,23 +170,23 @@ router.post('/upload', function(req, res, next) {
 ```
 //这是在浏览器上的
 {
-	name: "sss",
-	file: {
-		size: 775702,
-		path: "./public/upload/04ec5a72-867a-4075-9926-f2ea5ff55544.jpg",
-		name: "Jellyfish.jpg",
-		type: "image/jpeg",
-		extName: ".jpg"
-	},
-	file2: {
-		size: 1411,
-		path: "./public/upload/7429b7b8-feca-44d1-9039-6446920e46a2.gif",
-		name: "QQ截图20150721143806.gif",
-		type: "image/gif",
-		extName: ".gif"
-	}
+    name: "sss",
+    file: {
+        size: 775702,
+        path: "./public/upload/04ec5a72-867a-4075-9926-f2ea5ff55544.jpg",
+        name: "Jellyfish.jpg",
+        type: "image/jpeg",
+        extName: ".jpg"
+    },
+    file2: {
+        size: 1411,
+        path: "./public/upload/7429b7b8-feca-44d1-9039-6446920e46a2.gif",
+        name: "QQ截图20150721143806.gif",
+        type: "image/gif",
+        extName: ".gif"
+    }
 }
 ```
 
-
+[http://kirochen.com/2015/07/21/upload-demo-formidable/](http://kirochen.com/2015/07/21/upload-demo-formidable/)
 
