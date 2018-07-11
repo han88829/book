@@ -12,17 +12,17 @@
 var crypto = require('crypto');
 //加密
 function encrypt(str,secret){
-	var cipher = crypto.createCipher('aes192',secret);
-	var enc = cipher.update(str,'utf8','hex');
-	enc += cipher.final('hex');
-	return enc;
+    var cipher = crypto.createCipher('aes192',secret);
+    var enc = cipher.update(str,'utf8','hex');
+    enc += cipher.final('hex');
+    return enc;
 }
 //解密
 function decrypt(str,secret){
-	var decipher = crypto.createDecipher('aes192',secret);
-	var dec = decipher.update(str,'hex','utf8');
-	dec += decipher.final('utf8');
-	return dec;
+    var decipher = crypto.createDecipher('aes192',secret);
+    var dec = decipher.update(str,'hex','utf8');
+    dec += decipher.final('utf8');
+    return dec;
 }
 ```
 
@@ -30,35 +30,36 @@ function decrypt(str,secret){
   `crypto.createCipher(algo,pwd)`,该函数接收两个参数，一个加密算法，一个密钥字串，返回一个’Cipher’对象。  
   加密算法有很多种，我这里使用的是’aes192’，可以运行下面的代码查看所有支持的算法：
 
-* ```
-  var crypto = require('crypto');
-  console.log(crypto.getCiphers());
+* \`\`\`  
+  var crypto = require\('crypto'\);  
+  console.log\(crypto.getCiphers\(\)\);
 
+    * `cipher.update(data[,input_encoding][,output_encoding])`,该函数可接收三个参数，编码可选\(输入只能是`'utf8','ascii','binary'`之一，输出只能是`'binary','base64','hex'`\)，返回指定编码后的加密数据，如果编码缺省，则返回`buffer`类型。  
+      `cipher.update()`可以运行多次，但只能在`cipher.final()`之前运行。  
+      `cipher.final(output_encoding)`,返回指定编码的加密字串。
 
-  ```
-* `cipher.update(data[,input_encoding][,output_encoding])`,该函数可接收三个参数，编码可选\(输入只能是`'utf8','ascii','binary'`之一，输出只能是`'binary','base64','hex'`\)，返回指定编码后的加密数据，如果编码缺省，则返回`buffer`类型。  
-  `cipher.update()`可以运行多次，但只能在`cipher.final()`之前运行。  
-  `cipher.final(output_encoding)`,返回指定编码的加密字串。
+    * 解密操作  
+      解密操作类似，首先先定义解密用`decipher`对象，保持和加密所用的密钥、加密算法一致；  
+      然后使用decipher将加密字串解密即可。
 
-* 解密操作  
-  解密操作类似，首先先定义解密用`decipher`对象，保持和加密所用的密钥、加密算法一致；  
-  然后使用decipher将加密字串解密即可。
+    #### 示例 {#示例}
 
-#### 示例 {#示例}
+    1. 加密
 
-1. 加密
+    2.
 
-2. ```
-   encrypt("helloworld","weird sheep");
-   //Output: faf46f87e8befb82bc643805cfd753a6
-   ```
+`encrypt("helloworld","weird sheep");  
+   //Output: faf46f87e8befb82bc643805cfd753a6`
 
+```
 2.解密
-
-```
-decrypt("faf46f87e8befb82bc643805cfd753a6","weird sheep");
-//Output: helloworld
 ```
 
+````decrypt("faf46f87e8befb82bc643805cfd753a6","weird sheep");  
+//Output: helloworld  
+```````
 
+
+
+原文链接：[http://zhangjh.me/2016/06/17/node-crypto/](http://zhangjh.me/2016/06/17/node-crypto/)
 
