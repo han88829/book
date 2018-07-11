@@ -58,6 +58,7 @@
     * [pm2 使用指南](web/node/pm2-shi-yong-zhi-nan.md)
     * [cli工具](web/node/cligong-ju.md)
     * [上传文件](web/node/shang-chuan-wen-jian.md)
+    * [nodejs使用crypto进行加密/解密操作](web/node/nodejsshi-yong-crypto-jin-xing-jia-5bc6-jie-mi-cao-zuo.md)
 * [ios](ios.md)
   * [面试题储备](ios/mian-shi-ti-chu-bei.md)
 * [工具](gong-ju.md)
