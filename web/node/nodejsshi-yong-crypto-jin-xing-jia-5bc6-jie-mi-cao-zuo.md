@@ -42,22 +42,20 @@ function decrypt(str,secret){
     解密操作类似，首先先定义解密用`decipher`对象，保持和加密所用的密钥、加密算法一致；  
     然后使用decipher将加密字串解密即可。
 
-    #### 示例 {#示例}
+  示例
 
-  * 加密
+  * `加密`
 
-    2.
+  * `encrypt("helloworld","weird sheep");      
+       //Output: faf46f87e8befb82bc643805cfd753a6`
 
-`encrypt("helloworld","weird sheep");    
-   //Output: faf46f87e8befb82bc643805cfd753a6`
+
 
 ```
 2.解密
 decrypt("faf46f87e8befb82bc643805cfd753a6","weird sheep");
 //Output: helloworld
 ```
-
-
 
 原文链接：[http://zhangjh.me/2016/06/17/node-crypto/](http://zhangjh.me/2016/06/17/node-crypto/)
 
