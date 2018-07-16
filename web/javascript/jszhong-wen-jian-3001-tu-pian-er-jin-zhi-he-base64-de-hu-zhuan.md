@@ -12,8 +12,8 @@ function getBase64Image(img) {
     var dataURL = canvas.toDataURL("image/" + ext);
     return dataURL;
 }
- 
- 
+
+
 /**
 *Base64字符串转二进制
 */
@@ -30,8 +30,8 @@ function dataURLtoBlob(dataurl) {
         type: mime
     });
 }
- 
- 
+
+
 var img = "图像文件URL地址";
 var image = new Image();
 image.src = img;
@@ -42,6 +42,23 @@ image.onload = function() {
     var file = dataURLtoBlob(base64);
 }
 
+
+/**
+*blob字符串转Base64
+*/
+function blobToDataURL(blob, callback) {
+
+    var a = new FileReader();
+
+    a.onload = function (e) {
+
+        callback(e.target.result);
+
+    }
+
+    a.readAsDataURL(blob);
+
+}
 ```
 
 
