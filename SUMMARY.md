@@ -67,4 +67,6 @@
   * [Excel表格密码保护的解除方法](gong-ju/excelbiao-ge-mi-ma-bao-hu-de-jie-chu-fang-fa.md)
 * [iOS 移动端](ios-yi-dong-duan.md)
 * [小链接](xiao-lian-jie.md)
+* [PHP](php.md)
+  * [文件读取](php/wen-jian-du-qu.md)
 
