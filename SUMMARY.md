@@ -44,6 +44,7 @@
       * [解决图片失真](web/javascript/dao-chu-pdf/jie-jue-tu-pian-shi-zhen.md)
     * [判断字符串长度（带中文）](web/javascript/pan-duan-zi-fu-chuan-chang-du-ff08-dai-zhong-wen-ff09.md)
     * [js中 文件、图片二进制和base64的互转](web/javascript/jszhong-wen-jian-3001-tu-pian-er-jin-zhi-he-base64-de-hu-zhuan.md)
+    * [读取深度嵌套的json数据](web/javascript/du-qu-shen-du-qian-tao-de-json-shu-ju.md)
   * [资料](web/zi-liao.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [小程序](web/xiao-cheng-xu.md)
