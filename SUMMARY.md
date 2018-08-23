@@ -69,4 +69,5 @@
 * [小链接](xiao-lian-jie.md)
 * [PHP](php.md)
   * [文件读取](php/wen-jian-du-qu.md)
+  * [接收前端json数据](php/jie-shou-qian-duan-json-shu-ju.md)
 
