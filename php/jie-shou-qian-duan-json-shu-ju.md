@@ -16,19 +16,14 @@ let headres = {
         })
 ```
 
-
-
-
-
-后端php处理数据
+#### 后端php处理数据:
 
 ```
  $data = file_get_contents('php://input');
  $data = json_decode($data, true);//第二个参数true，使得$data变为array类型否则会出现以下错误
- 
+
 //Fatal error: Cannot use object of type stdClass as array in
 //解决办法 $result = json_decode($data, true);
- 
 ```
 
 
