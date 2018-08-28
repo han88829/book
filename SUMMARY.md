@@ -58,6 +58,7 @@
     * [nodejs使用crypto进行加密/解密操作](web/node/nodejsshi-yong-crypto-jin-xing-jia-5bc6-jie-mi-cao-zuo.md)
   * [其他](web/qi-ta.md)
     * [禁止浏览器缓存](web/qi-ta/jin-zhi-liu-lan-qi-huan-cun.md)
+    * [chrome平滑滚动](web/qi-ta/chromeping-hua-gun-dong.md)
   * [pdf预览](web/其他/pdfyu-lan.md)
   * [问题整理](web/wen-ti-zheng-li.md)
   * [资料](web/zi-liao.md)
