@@ -67,6 +67,7 @@
   * [fetch](web/fetch.md)
 * [工具](gong-ju.md)
   * [Excel表格密码保护的解除方法](gong-ju/excelbiao-ge-mi-ma-bao-hu-de-jie-chu-fang-fa.md)
+  * [vscode（插件）](gong-ju/vscodeff08-cha-jian-ff09.md)
 * [小链接](xiao-lian-jie.md)
 * [PHP](php.md)
   * [文件读取](php/wen-jian-du-qu.md)
