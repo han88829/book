@@ -47,3 +47,24 @@
 
 
 
+
+
+导出
+
+            const innerHtml = `
+              <caption>${this.state.group.name || ""}</caption>
+              ${document.getElementById('table').innerHTML.replace(/<table class="">/g, '<table border="1">')}
+            `;
+
+            var html = "<html><head><meta charset='utf-8' /></head><body>" + innerHtml + "</body></html>";
+            // 实例化一个Blob对象，其构造函数的第一个参数是包含文件内容的数组，第二个参数是包含文件类型属性的对象
+            var blob = new Blob([html], { type: "application/vnd.ms-excel" });
+            var a = document.createElement('a');
+            var url = window.URL.createObjectURL(blob);   // 获取 blob 本地文件连接 (blob 为纯二进制对象，不能够直接保存到磁盘上)
+            a.href = url;
+            a.download = "测试表格.xls";
+            a.click();
+            window.URL.revokeObjectURL(url);
+
+
+
