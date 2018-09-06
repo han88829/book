@@ -1,4 +1,4 @@
-运行Flutter时出错；报错如下：
+### 运行Flutter时出错；报错如下：
 
 ```
 A problem occurred evaluating root project 'android'.
@@ -7,7 +7,7 @@ A problem occurred evaluating root project 'android'.
         platforms;android-27 Android SDK Platform 27
      To build this project, accept the SDK license agreements and install the missing components using the Android Studio SDK Manager.
      Alternatively, to transfer the license agreements from one workstation to another, see http://d.android.com/r/studio-ui/export-licenses.html
-     
+
      Using Android SDK: D:\SDK\android-sdk-windows
 ```
 
@@ -37,7 +37,6 @@ sdkmanager --list
 
 ```
 android update sdk --no-ui --all --filter build-tools-27.0.1,android-27,extra-android-m2repository
-
 ```
 
 
