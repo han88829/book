@@ -72,4 +72,6 @@
 * [PHP](php.md)
   * [文件读取](php/wen-jian-du-qu.md)
   * [接收前端json数据](php/jie-shou-qian-duan-json-shu-ju.md)
+* [App](app.md)
+  * [android未授权错误](app/androidwei-shou-quan-cuo-wu.md)
 
