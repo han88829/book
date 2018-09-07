@@ -1,4 +1,4 @@
-# 此书由众好友一起维护，不同的行业，不同的分享
+# 技术填坑之路
 
 web维护：
 
@@ -10,15 +10,7 @@ web维护：
 
 * [https://github.com/han88829](https://github.com/han88829 "github")  github
 
-iOS维护：
 
-* Mr. Zhao
-
-* 进阶中的iOS开发者...
-
-* ...
-
-* [https://github.com/le1149733675](https://github.com/le1149733675 "github")   github
 
 
 
