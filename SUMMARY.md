@@ -72,6 +72,7 @@
 * [PHP](php.md)
   * [文件读取](php/wen-jian-du-qu.md)
   * [接收前端json数据](php/jie-shou-qian-duan-json-shu-ju.md)
+  * [自定义排序](php/zi-ding-yi-pai-xu.md)
 * [App](app.md)
   * [android未授权错误\(Flutter\)](app/androidwei-shou-quan-cuo-wu.md)
 
