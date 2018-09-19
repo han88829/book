@@ -70,7 +70,6 @@
   * [Excel表格密码保护的解除方法](gong-ju/excelbiao-ge-mi-ma-bao-hu-de-jie-chu-fang-fa.md)
   * [vscode（插件）](gong-ju/vscodeff08-cha-jian-ff09.md)
 * [小链接](xiao-lian-jie.md)
-  * [前后端教程链接](xiao-lian-jie/qian-hou-duan-jiao-cheng-lian-jie.md)
 * [PHP](php.md)
   * [文件读取](php/wen-jian-du-qu.md)
   * [接收前端json数据](php/jie-shou-qian-duan-json-shu-ju.md)
