@@ -58,6 +58,7 @@
     * [cli工具](web/node/cligong-ju.md)
     * [上传文件](web/node/shang-chuan-wen-jian.md)
     * [nodejs使用crypto进行加密/解密操作](web/node/nodejsshi-yong-crypto-jin-xing-jia-5bc6-jie-mi-cao-zuo.md)
+    * mongodb 加入验证之后连接失败
   * [其他](web/qi-ta.md)
     * [禁止浏览器缓存](web/qi-ta/jin-zhi-liu-lan-qi-huan-cun.md)
     * [chrome平滑滚动](web/qi-ta/chromeping-hua-gun-dong.md)
